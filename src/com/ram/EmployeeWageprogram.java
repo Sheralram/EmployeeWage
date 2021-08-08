@@ -1,6 +1,7 @@
 package com.ram;
 
 import java.util.Random;
+import java.util.Scanner;
 
 public class EmployeeWageprogram {
     public static void main(String[] args) {
@@ -26,5 +27,22 @@ public class EmployeeWageprogram {
             System.out.println("Employee is absent");
             System.out.println("Employee Daily Wage is Zero");
         }
+        Scanner read = new Scanner(System.in);
+        System.out.print("Enter any number between 0 and 2: ");
+        int num = read.nextInt();
+           switch (num){
+       case 1: System.out.println("Employee is Present");
+           int DailyEmpWage=Wageperhour*Fulldayhour;
+           System.out.println("Employee Daily Wage is " +  DailyEmpWage);
+           break;
+       case 2: System.out.println("Employee is  Part time Present");
+           int ParttimeEmpWage=Wageperhour*Parttimehour;
+           System.out.println("Employee Parttime Wage is " + ParttimeEmpWage);
+           break;
+       default : System.out.println("Employee is absent");
+           System.out.println("Employee Daily Wage is Zero");
+
+   }
     }
+
 }
